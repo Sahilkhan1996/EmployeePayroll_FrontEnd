@@ -1,0 +1,38 @@
+<app-header></app-header>
+<a routerLink="/emp-form">
+    <button>Add User</button>
+</a>
+<div class="data">
+    <h2>Employee Details</h2>
+
+
+
+    <table class="table">
+        <tr class="heading">
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Start Date</th>
+            <th>Actions</th>
+
+        </tr>
+        <tr>
+            <td>Sahil</td>
+            <td>Male</td>
+            <td>Engineer, Finance</td>
+            <td>300054.56</td>
+            <td>12/05/2023</td>
+            <td>I am good</td>
+        </tr>
+
+        <tr *ngFor="let item of userList">
+            <td> {{item.name}}</td>
+            <td> {{item.gender}} </td>
+            <td> {{item.department}}</td>
+            <td> {{item.salary}}</td>
+            <td>{{item.startDate}}</td>
+            <td>I am good</td>
+        </tr>
+    </table>
+</div>
